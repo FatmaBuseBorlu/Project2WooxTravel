@@ -129,8 +129,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DestinationController.cs" />
     <Compile Include="Context\TravelContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Destination.cs" />
@@ -145,6 +148,10 @@
     <Compile Include="Migrations\202410082228336_mig2.cs" />
     <Compile Include="Migrations\202410082228336_mig2.designer.cs">
       <DependentUpon>202410082228336_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410151709078_mig3.cs" />
+    <Compile Include="Migrations\202410151709078_mig3.designer.cs">
+      <DependentUpon>202410151709078_mig3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -588,6 +595,12 @@
     <Content Include="kaiadmin-lite-1.2.0\LICENSE" />
     <Content Include="kaiadmin-lite-1.2.0\README.md" />
     <Content Include="Areas\Admin\Views\AdminLayout\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialHead.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialSideBar.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialNavBar.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialFooter.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialScript.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -617,6 +630,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Destination\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -640,6 +654,9 @@
     <EmbeddedResource Include="Migrations\202410082228336_mig2.resx">
       <DependentUpon>202410082228336_mig2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410151709078_mig3.resx">
+      <DependentUpon>202410151709078_mig3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -659,7 +676,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54125</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44380/</IISUrl>
+          <IISUrl>https://localhost:44381/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
