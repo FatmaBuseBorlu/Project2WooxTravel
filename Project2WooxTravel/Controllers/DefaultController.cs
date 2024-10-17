@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Project2WooxTravel.Areas.Admin.Controllers
+namespace Project2WooxTravel.Controllers
 {
-    public class AdminLayoutController : Controller
+    public class DefaultController : Controller
     {
-      
         public ActionResult Index()
         {
             return View();
@@ -17,7 +16,7 @@ namespace Project2WooxTravel.Areas.Admin.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult PartialSideBar()
+        public PartialViewResult PartialScript()
         {
             return PartialView();
         }
@@ -25,11 +24,15 @@ namespace Project2WooxTravel.Areas.Admin.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult PartialFooter()
+        public PartialViewResult PartialBanner()
         {
             return PartialView();
         }
-        public PartialViewResult PartialScript()
+        public PartialViewResult PartialCountry()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialFooter()
         {
             return PartialView();
         }
